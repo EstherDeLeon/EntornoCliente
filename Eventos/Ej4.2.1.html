@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 4.2.1</title>
+    <script>
+        function validacion(form) {
+            if (validaNombre() && validaApellido() && validaTelefono() && validaDni() && validaCorreo()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function validaNombre() {
+            valor = document.getElementById("nombre").value;
+            if (valor == /^[a-zA-Z]+$/ || valor.length == 0 || valor == null) {
+                alert("El nombre es incorrecto");
+                return false;
+            }
+            return true;
+        }
+
+        function validaCorreo() {
+            valor = document.getElementById("correo").value;
+            if (!valor == /^(.+\@.+\..+)$/ || valor == null || valor.length == 0) {
+                alert("El correo es incorrecto");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form method="get" name="form" onsubmit="return validacion();">
+        <div>
+            Nombre:<input type="text" name="nombre" id="nombre" onchange="validaNombre()" /><br />
+        </div>
+        <br />
+        <div>
+            Apellidos:<input type="text" name="apellidos" id="apellido" onchange="validaApellido()" />
+        </div>
+        <br />
+        <div>
+            Telefono:<input type=" text" name="telefono" id="telefono" onchange="validaTelefono()" />
+        </div>
+        <div>
+            DNI:<input type="text" name="dni" id="dni" onchange="validaDni()" />
+        </div>
+        <br />
+        <div>
+            Correo electrónico:<input type="text" name="correo" id="correo" onchange="validaCorreo()" />
+        </div>
+        <br />
+        <div>
+            <input type="submit" value="Enviar" />
+        </div>
+    </form>
+</body>
+
+</html>

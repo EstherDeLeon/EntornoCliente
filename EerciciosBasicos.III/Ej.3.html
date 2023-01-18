@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ej3</title>
+    </head>
+    <body>
+        <script>
+            var dni = prompt("Introduce tu DNI, por favor:", "");
+            var letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+            var posicion = dni % 23;
+            var letraDNI = letras.substring(posicion, posicion + 1);
+            if (letraDNI == dni) {
+                document.write("La letra del DNI es correcta");
+            } 
+           else {
+                document.write("La letra del DNI es incorrecta");
+            }
+        </script>
+    </body>
+</html>

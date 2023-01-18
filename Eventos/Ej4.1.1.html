@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #contenedor {
+            height: 1200px;
+        }
+    </style>
+    <script>
+        function myFunction(event) {
+            var evento = evento || window.event;
+
+            document.f1.clientX.value = window.event.type;
+
+            var clientx = evento.clientX;
+            document.f1.clientX.value = clientx;
+
+            var clienty = evento.clientY;
+            document.f1.clientY.value = clienty;
+
+            var screenx = evento.screenX;
+            document.f1.screenX.value = screenx;
+
+            var screeny = evento.screenY;
+            document.f1.screenY.value = screeny;
+
+            var pagex = evento.pageX;
+            document.f1.pageX.value = pagex;
+
+            var pagey = evento.pageY;
+            document.f1.pageY.value = pagey;
+        }
+    </script>
+</head>
+
+<body onmousemove="myFunction(event)">
+    <div id="contenedor">
+        <form name="f1">
+            Cordenada X navegador: <input type="text" name="clientX" /> Cordenada Y
+            navegador: <input type="text" name="clientY" /><br /><br />
+
+            Cordenada X monitor: <input type="text" name="screenX" /> Cordenada Y
+            monitor: <input type="text" name="screenY" /><br /><br />
+
+            Cordenada X absoluta: <input type="text" name="pageX" /> Cordenada Y
+            absoluta: <input type="text" name="pageY" /><br /><br />
+        </form>
+    </div>
+</body>
+
+</html>

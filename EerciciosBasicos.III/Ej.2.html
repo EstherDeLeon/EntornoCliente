@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ej2</title>
+    </head>
+    <body>
+        <script>
+            var hoy = new Date();
+            var fecha = hoy.getDay();
+            var dia = hoy.getDate();
+            var mes = hoy.getMonth() + 1 ;
+            var año = hoy.getFullYear();
+            var hora = hoy.getHours();
+            var minuto = hoy.getMinutes();
+            var segundo = hoy.getSeconds();
+
+            if (fecha == 0) {
+                fecha = "Domingo";
+            }else if (fecha == 1) {
+                fecha = "Lunes";
+            }else if (fecha == 2) {
+                fecha = "Martes";
+            }else if (fecha == 3) {
+                fecha = "Miercoles";
+            }else if (fecha == 4) {
+                fecha = "Jueves";
+            }else if (fecha == 5) {
+                fecha = "Viernes";
+            }else if (fecha == 6) {
+                fecha = "Sabado";
+            }
+
+            if (mes == 1) {
+                mes = "Enero";
+            }else if (mes == 2) {
+                mes = "Febrero";
+            }else if (mes == 3) {
+                mes = "Marzo";
+            }else if (mes == 4) {
+                mes = "Abril";
+            }else if (mes == 5) {
+                mes = "Mayo";
+            }else if (mes == 6) {
+                mes = "Junio";
+            }else if (mes == 7) {
+                mes = "Julio";
+            }else if (mes == 8) {
+                mes = "Agosto";
+            }else if (mes == 9) {
+                mes = "Septiembre";
+            }else if (mes == 10) {
+                mes = "Octubre";
+            }else if (mes == 11) {
+                mes = "Noviembre";
+            }else if (mes == 12) {
+                mes = "Diciembre";
+            }
+
+            if (hora < 10) {
+                hora = "0" + hora;
+            }
+
+            if (minuto < 10) {
+                minuto = "0" + minuto;
+            }
+            if (segundo < 10) {
+                segundo = "0" + segundo;
+            }
+            if(dia < 10){
+                dia = "0" + dia;
+            }
+
+            document.write("Hoy es: "+fecha+", "+dia+" de "+mes+" del año "+año+" y son las "+hora+":"+minuto+":"+segundo);
+        </script>
+    </body>
+</html>

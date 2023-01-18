@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+
+    <script>
+
+        function validaEmail() {
+            valor = document.getElementById("email").value;
+            if (! /^(.+\@.+\..+)$/.test(valor)) {
+                alert("El email no es correcto");
+                return false;
+            }
+            return true;
+        }
+        function validaDni() {
+            valor = document.getElementById("dni").value;
+            var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E']
+            if (! /^\d{8}[a-zA-Z]$/.test(valor)) {
+                alert("El dni no es correcto");
+                return false;
+            }
+            if (valor.charAt(8).toUpperCase() != letras[(valor.substring(0, 8)) % 23]) {
+                return false;
+            }
+        }
+        function validaTelefono() {
+            valor = document.getElementById("telefono").value;
+            if (! /^\d{9}$/.test(valor)) {
+                alert("El telefono no es correcto");
+            }
+        }
+        function enviar() {
+            if (form.checkbox.checked == true) {
+                form.action = "form_correct.html";
+            }
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <form action="form" name="form" method="get" onsubmit="return validacion();">
+        <div>
+            Email:<input type="text" name="email" id="email" onchange="validaEmail()" /><br />
+        </div>
+        <br />
+        <div>
+            Dni:<input type="text" name="dni" id="dni" onchange="validaDni()" />
+        </div>
+        <br />
+        <div>
+            Telefono:<input type="text" name="telefono" id="telefono" onchange="validaTelefono()" />
+        </div>
+        <br />
+        <div>
+            <input type="checkbox" name="checkbox" />
+            <input type="submit" value="Enviar" onclick="enviar()" />
+    </form>
+</body>
+
+</html>

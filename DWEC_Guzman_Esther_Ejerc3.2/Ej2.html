@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+</head>
+<body>
+    <script>
+        function dos_num(num1, num2){
+
+            num1=2
+            num2=3
+           
+            let resultado= "<b>Los números declarados son: <br/>" + "número uno:  "+num1 + " <br/>número dos:  " + num2+"</b>";
+
+            //Comprueba si el primero es mayor que el segundo.
+            if(num1 > num2){
+                document.write("El número mayor es: " + num1);
+            }else
+                document.write("El número mayor es: " + num2);
+
+            //Comprueba si el segundo es positivo.
+            if(num2>0){
+                document.write("<br/>El número " + num2 + " es positivo.");
+
+            //Comprueba si el primero es negativo o distinto de cero.
+            }if(num1<0 || num2!=0){
+                document.write("<br/>El número " + num1 + " es negativo o distinto de 0.");
+
+            /*Comprueba si al sumar 1 al primero lo convertimos en mayor o igual que el segundo.*/
+            }
+            if(num1+1 >= num2){
+                document.write("<br/>El número " + num1 + " ,al sumarle 1, es mayor o igual que el número " + num2 + "." );
+            }
+            return resultado;
+        
+    }
+    document.write("<br/>",dos_num());
+
+    </script>
+</body>
+</html>

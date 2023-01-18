@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta http-equiv="Content-Type"
+    content="text/html;charset=utf-8">
+ <title>Ej.3</title>
+ </head>
+ <body>
+    <script>
+        document.write("Hola, el total de altura es: "+screen.availHeight);
+        document.write("<br>");
+        document.write("anchura: "+screen.availWidth);
+        document.write("<br>");
+        document.write("colorDepth: "+screen.colorDepth);
+        document.write("<br>");
+        document.write("pixelDepth: "+screen.pixelDepth);
+        document.write("<br>");
+        //objeto navigator 
+        document.write(navigator.userAgent);
+        //var win = window.open("rigth=100", "bottom=100", "width=250, height=150px");
+        
+       function moverVentana() {
+         mi_ventana.moveBy(5,5);
+         i++;
+         if(i<20)
+         setTimeout('moverVentana',1000);
+         else
+         mi_ventana.close();
+       }
+    </script>  
+    <script>
+      var opciones="left=100,top=100,width=150",i=0;
+      mi_ventana= window.open("","",opciones);
+      mi_ventana.document.write("Una prueba de abrir ventanas");
+      mi_ventana.moveTo(400,100);
+    </script>
+ </body>
+</html>

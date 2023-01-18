@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+</head>
+<body>
+    <script>
+        let vector = ["true", "5","false","hola","adios","2"];
+        //document.write(vector)
+        document.write("<br/>")
+        //-	El cuarto componente es mayor o no que el tercero
+        if(vector[3].length > vector[4].length){
+            document.write("El tercer componente:  " + vector[3] + " ,es más largo que el cuarto:  " + vector[4]);
+        }else if(vector[3].length < vector[4].length){
+            document.write("El cuarto componente:  " + vector[4] + " ,es más largo que el tercero:  " + vector[3]);
+            document.write("<br/>")
+        }
+        //-	Realizar un OR entre el primer y tercer componente
+        if (vector[0].length == 4 || vector[2].length == 1){
+            document.write("<br/>")
+            document.write("El primer componente mide 4 caracteres de largo");
+            document.write("<br/>")
+        }
+        //-	Realizar un AND entre el primer y tercer componente.
+        if (vector[0].length == 4 && vector[2].length == 5){
+            document.write("<br/>")
+            document.write("El primer componente mide 4 caracteres de largo y el tercero 5");
+            document.write("<br/>")
+        }
+        //-	Sumar, restar, multiplicar, dividir y calcular el módulo entre el segundo y el sexto componente.
+        num1 = parseInt(vector[1]);
+        num2 = parseInt(vector[5]);
+        suma = num1 + num2;
+        document.write("<br/>")
+        document.write("<br/>")
+        document.write("La suma del componente 2 y el componente 6 es igual a : "+suma)
+
+        resta = num1 - num2;
+        document.write("<br/>")
+        document.write("La resta del componente 2 y el componente 6 es igual a : "+resta)
+
+        multi = num1 * num2;
+        document.write("<br/>")
+        document.write("La multiplicación del componente 2 y el componente 6 es igual a : "+multi)
+
+        divi = num1 / num2;
+        document.write("<br/>")
+        document.write("La división del componente 2 y el componente 6 es igual a : "+divi)
+
+        mod = num1 % num2;
+        document.write("<br/>")
+        document.write("El módulo del componente 2 y el componente 6 es igual a : "+mod)
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej3</title>
+</head>
+
+<body>
+    <script>
+        function ProductosAlimenticios(nombre_in, precio_in, codigo_in) {
+            this.nombre = nombre_in;
+            this.precio = precio_in;
+            this.codigo = codigo_in;
+
+            this.imprimeDatos = function () {
+                return `Producto: ${this.nombre}, que tiene un precio de: ${this.precio} por unidad ,con código nº: ${this.codigo}.`;
+            }
+            
+        }
+    </script>
+    <script>
+        var productos = new Array(3);
+        productos[0] = new ProductosAlimenticios("Agua","0.50","1");
+        productos[1] = new ProductosAlimenticios("Pan","1.00","2");
+        productos[2] = new ProductosAlimenticios("Manzana","1.20","3");
+        
+
+        for (i = 0; i < productos.length; i++) {
+                //document.write("Nombre: " + productos[i].nombre +
+                 //   ".    Precio: " + productos[i].precio + " Código: " + productos[i].codigo + " <br/> ");
+                document.write(productos[i].imprimeDatos() + " <br/> ");
+                }
+    </script>
+</body>
+
+</html>

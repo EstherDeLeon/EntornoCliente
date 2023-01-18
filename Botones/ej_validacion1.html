@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej1</title>
+    <script>
+        function validaNombre() {
+            valor = document.getElementById("nombre").value;
+            if (valor == null || valor.length == 0) {
+                alert("El nombre no puede estar vacío");
+                return false;
+            }
+            return true;
+
+        }
+        function validaTelefono() {
+            valor = document.getElementById("telefono").value;
+            if (isNaN(valor)) {
+                alert("El campo tiene que ser numérico");
+                return false;
+            }
+            return true;
+        }
+        function validaCheck() {
+            elemento = document.getElementById("checkbox");
+            if (!elemento.checked) {
+                alert("La casilla no ha sido marcada");
+                return false;
+            }
+            return true;
+        }
+        //areglar
+        function validaFecha() {
+            var dia = document.getElementById("dia").value;
+            var mes = document.getElementById("mes").value;
+            var anio = document.getElementById("año").value;
+            fecha = new Date(año, mes, dia);
+            if (isNaN(fecha)) {
+                alert("La fecha no es correcta");
+                return false;
+            }
+            alert("La fecha introducida es: " + fecha);
+            return true;
+        }
+
+    </script>
+</head>
+
+<body>
+    <form action="form.php" method="get" onsubmit="return validacion();">
+        <div>
+            Nombre:<input type="text" name="nombre" id="nombre" onchange="validaNombre()" /><br />
+        </div>
+        <br />
+        <div>
+            Apellidos:<input type="text" name="apellidos" id="apellido" />
+        </div>
+        <br />
+        <div>
+            Telefono:<input type="text" name="telefono" id="telefono" onchange="validaTelefono()" />
+        </div>
+        <br />
+        <div>
+            Dia:<input type="text" name="dia" id="dia" onchange="validaFecha()" />
+            Mes:<input type="text" name="mes" id="mes" onchange="validaFecha()" />
+            Año:<input type="text" name="año" id="año" onchange="validaFecha()" /><br />
+        </div>
+        <div>
+            <input type="checkbox" value="validacion" id="checkbox" />Validacion
+            <br />
+            <input type="submit" value="Enviar" onclick="validaCheck()" />
+        </div>
+    </form>
+
+</body>
+
+</html>

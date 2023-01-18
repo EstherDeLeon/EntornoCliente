@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej4.2.2</title>
+    <script>
+        for (i = 0; i < formulario.elements.length; i++)
+            elemento = formulario.elements[i]
+        var palabras = elemento.className.split("");
+        for (j = 0; j < palabras.length; j++)
+            switch (palabras[j]) {
+                case "noVacioYnoNumeros": {
+                    if (elemento.value == null || elemento.value.length == 0 || !isNaN(elemento.value))
+                        alert("El campo " + elemento.name + " no puede estar vacio ni contener numeros");
+                }
+                    break;
+            }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

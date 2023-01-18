@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Varios Objetos predefinidos de JS</title>
+    </head>
+    <body>
+        <script>
+           
+            //document.write("El ancho de la pantalla es: "+ screen.width+"px");
+            //document.write("<br>");
+            //document.write("El alto de la pantalla es: "+ screen.height+"px");
+            var cuaAncho = Math.sqrt(screen.width);
+            var cuaAlto = Math.sqrt(screen.height);
+            //document.write("<br>");
+            //document.write("El cuadrado del ancho  la pantalla es: "+ cuaAncho);
+            //document.write("<br>");
+            //document.write("El cuadrado del alto  la pantalla es: "+ cuaAlto);
+            var total = Math.sqrt(cuaAlto+cuaAncho);
+            //document.write("<br>");
+            document.write('<p style="color:white ; background-color:grey">El valor de la diagonal de  la pantalla disponible es:"' +total.toFixed(1) ,'"</p>');
+        </script>
+        
+    </body>
+</html>

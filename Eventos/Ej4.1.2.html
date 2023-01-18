@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 4.1.2</title>
+    <script>
+
+        function colorRojo() {
+            var rojo = document.getElementsByClassName("rojo");
+            alert("El color de fondo es: rojo");
+        }
+        function colorVerde() {
+            var verde = document.getElementsByClassName("verde");
+            alert("El color de fondo es: verde");
+        }
+        function colorAmarillo() {
+            var amarillo = document.getElementsByClassName("amarillo");
+            alert("El color de fondo es: amarillo");
+        }
+        function colorAzul() {
+            var azul = document.getElementsByClassName("azul");
+            alert("El color de fondo es: azul");
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .content {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .rojo {
+            float: left;
+            width: 50vw;
+            height: 50vh;
+            background-color: red;
+        }
+
+        .verde {
+            float: right;
+            width: 50vw;
+            height: 50vh;
+            background-color: green;
+        }
+
+        .amarillo {
+            float: left;
+            width: 50vw;
+            height: 50vh;
+            background-color: yellow;
+        }
+
+        .azul {
+            float: right;
+            width: 50vw;
+            height: 50vh;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="rojo" onclick="colorRojo()"></div>
+        <div class="verde" onclick="colorVerde()"></div>
+        <div class="amarillo" onclick="colorAmarillo()"></div>
+        <div class="azul" onclick="colorAzul()"></div>
+    </div>
+</body>
+
+</html>
