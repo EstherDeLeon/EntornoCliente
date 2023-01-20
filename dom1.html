@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom1</title>
+
+</head>
+
+<body>
+
+    <div>Hola Mundo</div>
+
+    <script>
+        //creo un nodo de tipo elemento
+        var div = document.createElement("div");
+
+        //creo un nodo de tipo texto
+        var texto = document.createTextNode("Hola Mundo2");
+
+        //añado el nodo de texto al nodo de tipo elemento
+        div.appendChild(texto);
+
+        // añado el nodo de tipo elemento al documento
+        document.body.appendChild(div);
+
+        //creo un nodo de tipo elemento y selecciono e identifico el div en la posicion X.
+        var div = document.getElementsByTagName("div")[0];
+
+        //elimino el nodo div
+        //document.body.removeChild(div);
+
+
+        //creo otros dos nodos
+        var div2 = document.createElement("div");
+        var texto2 = document.createTextNode("texto2");
+
+        //añado el nodo de texto al nodo de tipo elemento
+        div2.appendChild(texto2);
+
+
+        var originalDiv = document.getElementsByTagName("div")[0];
+        originalDiv.parentNode.replaceChild(div2, originalDiv);
+
+
+        var div3 = document.createElement("div");
+        var texto3 = document.createTextNode("texto3");
+
+        //añado el nodo de texto al nodo de tipo elemento
+        div3.appendChild(texto3);
+
+
+        var originalDiv = document.getElementsByTagName("div")[1];
+        originalDiv.parentNode.insertBefore(div3, originalDiv);
+
+
+
+    </script>
+</body>
+
+</html>
