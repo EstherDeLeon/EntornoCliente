@@ -18,7 +18,7 @@
         var div = document.createElement("div");
 
         //creo un nodo de tipo texto
-        var texto = document.createTextNode("Hola Mundo2");
+        var texto = document.createTextNode("Hola Mundo2 que reemplaza al primer div");
 
         //añado el nodo de texto al nodo de tipo elemento
         div.appendChild(texto);
@@ -51,7 +51,7 @@
         //añado el nodo de texto al nodo de tipo elemento
         div3.appendChild(texto3);
 
-
+        //inserto el nodo div3 antes del nodo div2
         var originalDiv = document.getElementsByTagName("div")[1];
         originalDiv.parentNode.insertBefore(div3, originalDiv);
 

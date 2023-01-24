@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej5.1(Ejercicio JavaScript DOM sin manejadores semánticos)</title>
+
+    <script>
+        function mostrar() {
+            Element.attributes[2].nodeName;
+            Element.attributes[2].nodeValue;
+            alert("El nombre del atributo es: " + Element.attributes[2].nodeName);
+            alert("El valor del atributo es: " + Element.attributes[2].nodeValue);
+
+        }
+    </script>
+</head>
+
+<body>
+    <a href="#" id="id_link" title="Enlace de prueba" onclick="mostrar(this);">Pulsa aquí</a>
+
+</body>
+
+</html>

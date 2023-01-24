@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Árbol DOM cargado</title>
+    <script>
+        function cargada() {
+            window.onload = "true";
+            if (window.onload) { return true; }
+            return false;
+        }
+        function pulsar() {
+            if (cargada()) { alert("Página cargada correctamente"); }
+        }
+    </script>
+</head>
+
+<body>
+    <p onclick="pulsar();">Primer párrafo</p>
+</body>
+
+</html>
