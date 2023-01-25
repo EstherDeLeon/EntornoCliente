@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej5.5</title>
+
+    <script>
+        function mostrar() {
+
+            var atributo = document.createAttribute("title");
+            atributo.value = "Enlace de prueba cambiado";
+            document.getElementById("id_link").setAttributeNode(atributo);
+            alert(" El nombre del atributo cambiado ahora es: " + document.getElementById("id_link").attributes[2].nodeValue);
+
+
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <a href="#" id="id_link" title="Enlace de prueba" onmouseover="mostrar();">Pulsa aquí</a>
+
+</body>
+
+</html>

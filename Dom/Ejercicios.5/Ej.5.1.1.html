@@ -8,11 +8,11 @@
     <title>Ej5.1(Ejercicio JavaScript DOM sin manejadores semánticos)</title>
 
     <script>
-        function mostrar() {
-            Element.attributes[2].nodeName;
-            Element.attributes[2].nodeValue;
-            alert("El nombre del atributo es: " + Element.attributes[2].nodeName);
-            alert("El valor del atributo es: " + Element.attributes[2].nodeValue);
+        function mostrar(elemento) {
+            var atri = elemento.attributes[1].nodeName;
+            var valor = elemento.attributes[1].nodeValue;
+            alert("El nombre del atributo es: " + atri);
+            alert("El valor del atributo es: " + valor);
 
         }
     </script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej5.7</title>
+
+    <script>
+
+        var crearH3 = true;
+        function mostrar(num) {
+
+            var mensaje = document.getElementById("mensaje");
+
+            if (num == 1) {
+                mensaje.innerHTML = " Has pasado el ratón por el enlace";
+                mensaje.style.display = "inline";
+
+            } else if (num == 2) {
+                mensaje.innerHTML = " Has pulsado el enlace";
+                mensaje.style.color = "#0101ff";
+                mensaje.style.fontWeight = "bold";
+
+                if (crearH3) {
+                    var newH3 = document.createElement("h3");
+                    newH3.innerHTML = "Enlace pulsado";
+                    referencia = document.getElementById("id_link");
+                    document.body.insertBefore(newH3, referencia);
+                    crearH3 = false;
+                }
+
+                return false;
+
+            } else {
+                mensaje.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <a href="http://www.marca.es" id="id_link" title="Enlace de prueba" onmouseover="mostrar(1);"
+        onclick="return mostrar(2); " onmouseout="mostrar(3);">Pulsa aquí</a>
+    <span id="mensaje" style="display:none;"></span>
+
+</body>
+
+</html>
